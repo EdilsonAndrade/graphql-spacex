@@ -7,7 +7,10 @@ type Launch{
     mission:Mission
     rocket:Rocket
     isBooked: Boolean!
+<<<<<<< HEAD
     vacinou: Boolean!
+=======
+>>>>>>> 0c97547f35d47568610626ed70f971f7b2882714
 }
 type Rocket{
   id: ID!
@@ -53,11 +56,14 @@ type TripUpdateResponse{
   message: String 
   launches: [Launch]
 }
+<<<<<<< HEAD
 type LaunchConnection{
   cursor:String!
   hasMore: Boolean!
   launches:[Launch]! 
 }
+=======
+>>>>>>> 0c97547f35d47568610626ed70f971f7b2882714
 `
 
 module.exports = typeDefs;
