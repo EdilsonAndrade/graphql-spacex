@@ -44,7 +44,7 @@ type Query{
   me:User
 }
 type Mutation{
-  bookTrip(launchIds:[ID]!): TripUpdateResponse!  #here passing [ID]! mean that is obligate at least one id of launch or more
+  bookTrips(launchIds:[ID]!): TripUpdateResponse!  #here passing [ID]! mean that is obligate at least one id of launch or more
   cancelTrip(launchId: ID!): TripUpdateResponse! 
   login(email:String): User
 }

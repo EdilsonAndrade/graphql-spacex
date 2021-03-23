@@ -26,7 +26,7 @@ class UserAPI extends DataSource {
     const email =
       this.context && this.context.user ? this.context.user.email : emailArg;
     if (!email || !isEmail.validate(email)) return null;
-    
+
     const users = await this.store.users.findOrCreate({ where: { email } });
     return users && users[0] ? users[0] : null;
   }
@@ -48,6 +48,7 @@ class UserAPI extends DataSource {
   }
 
   async bookTrip({ launchId }) {
+    console.log(this.context.user);
     const userId = this.context.user.id;
     const res = await this.store.trips.findOrCreate({
       where: { userId, launchId },
